@@ -1,4 +1,3 @@
-{% extends 'base.html' %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +6,6 @@
    L<link rel="stylesheet" href="/templates/styles/create.css">
     <title>Sistema de Gerenciamento de Expedição Espacial</title>
 </head>
-{% block content %}
 <h2>Criar Nova Missão</h2>
 <form action="/create" method="POST">
     <label for="nome">Nome da Missão:</label>
@@ -39,4 +37,4 @@
     
     <button type="submit">Criar Missão</button>
 </form>
-{% endblock %}
+

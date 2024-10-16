@@ -1,0 +1,62 @@
+/* edit.css */
+
+/* Estilos Globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Cor de fundo escura para um tema espacial */
+    color: #FFFFFF; /* Texto branco para contraste */
+}
+
+/* Estilo do Formulário */
+form {
+    background-color: #1F1F1F; /* Fundo escuro para o formulário */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    color: #00BFFF; /* Cor azul claro para os rótulos */
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    background-color: #2C2C2C; /* Fundo escuro para os campos de entrada */
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    outline: none;
+    border: 1px solid #00BFFF; /* Borda azul claro ao focar no campo */
+}
+
+form button[type="submit"] {
+    background-color: #00BFFF; /* Botão com cor azul claro */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #008CBA; /* Tom mais escuro de azul ao passar o mouse */
+}

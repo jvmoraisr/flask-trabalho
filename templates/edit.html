@@ -1,6 +1,11 @@
-{% extends 'base.html' %}
-
-{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.
+    css') }}">
+   L<link rel="stylesheet" href="/templates/styles/edit.css">
+    <title>Sistema de Gerenciamento de Expedição Espacial</title>
+</head>
 <h2>Editar Missão</h2>
 <form action="/edit/{{ missao.id }}" method="POST">
     <label for="nome">Nome da Missão:</label>
@@ -32,4 +37,4 @@
     
     <button type="submit">Atualizar Missão</button>
 </form>
-{% endblock %}
+

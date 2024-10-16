@@ -1,0 +1,63 @@
+/* styles.css */
+
+/* Estilos Globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Cor de fundo escura para um tema espacial */
+    color: #FFFFFF; /* Texto branco para contraste */
+}
+
+/* Estilo da Tabela */
+table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #1F1F1F; /* Fundo escuro para a tabela */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar a tabela */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #2C2C2C; /* Borda sutil para células da tabela */
+}
+
+th {
+    background-color: #00BFFF; /* Cor de fundo azul claro para o cabeçalho */
+    color: #121212; /* Texto escuro para contraste */
+    font-size: 1.1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2C2C2C; /* Cor de fundo alternada para as linhas */
+}
+
+tbody tr:hover {
+    background-color: #008CBA; /* Cor azul ao passar o mouse sobre uma linha */
+}
+
+/* Estilo dos Links e Botões de Ação */
+td a {
+    color: #00BFFF;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td form button {
+    background-color: #FF6347; /* Cor vermelha para o botão de deletar */
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+td form button:hover {
+    background-color: #FF4500; /* Tom mais escuro de vermelho ao passar o mouse */
+}
