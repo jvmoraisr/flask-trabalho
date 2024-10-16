@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.
+    css') }}">
+   L<link rel="stylesheet" href="/templates/styles/create.css">
+    <title>Sistema de Gerenciamento de Expedição Espacial</title>
+</head>
 {% block content %}
 <h2>Criar Nova Missão</h2>
 <form action="/create" method="POST">

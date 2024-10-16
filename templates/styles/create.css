@@ -1,0 +1,114 @@
+/* styles.css */
+
+/* Estilos Globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Cor de fundo escura para um tema espacial */
+    color: #FFFFFF; /* Texto branco para contraste */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1F1F1F; /* Tom mais escuro para o cabeçalho */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #00BFFF; /* Azul claro para destacar o título */
+}
+
+/* Navegação */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: #00BFFF; /* Cor azul claro ao passar o mouse */
+    border-bottom: 2px solid #00BFFF; /* Linha inferior para destacar a navegação */
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Estilo do Formulário */
+form {
+    background-color: #1F1F1F; /* Fundo escuro para o formulário */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    color: #00BFFF; /* Cor azul claro para os rótulos */
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    background-color: #2C2C2C; /* Fundo escuro para os campos de entrada */
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    outline: none;
+    border: 1px solid #00BFFF; /* Borda azul claro ao focar no campo */
+}
+
+form button[type="submit"] {
+    background-color: #00BFFF; /* Botão com cor azul claro */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #008CBA; /* Tom mais escuro de azul ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #1F1F1F;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #888888; /* Cor de texto mais clara para o rodapé */
+    font-size: 0.9rem;
+}
