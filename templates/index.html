@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Missões Registradas</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Data de Lançamento</th>
+            <th>Destino</th>
+            <th>Estado</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for missao in missoes %}
+        <tr>
+            <td>{{ missao.id }}</td>
+            <td>{{ missao.nome }}</td>
+            <td>{{ missao.data_lancamento }}</td>
+            <td>{{ missao.destino }}</td>
+            <td>{{ missao.estado }}</td>
+            <td>
+                <a href="{{ url_for('edit', id=missao.id) }}">Editar</a>
+                <form action="{{ url_for('delete', id=missao.id) }}" method="POST" style="display:inline;">
+                    <button type="submit">Deletar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
