@@ -1,22 +1,18 @@
-/* styles.css */
-
-/* Estilos Globais */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/originals/fd/b2/1c/fdb21c0e4f3dbb6ccd9a63c68fce8645.gif'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
     color: #FFFFFF; 
 }
 
-/* Resto do CSS aqui... */
-
 
 /* Estilo do Cabeçalho */
 header {
-    background-color: #1F1F1F; /* Tom mais escuro para o cabeçalho */
+    background-color: rgba(31, 31, 31, 0.9); /* Fundo escuro e semi-transparente para o cabeçalho */
     padding: 20px;
     text-align: center;
 }
@@ -47,7 +43,7 @@ table {
     width: 80%;
     margin: 40px auto;
     border-collapse: collapse;
-    background-color: #1F1F1F; /* Fundo escuro para a tabela */
+    background-color: rgba(31, 31, 31, 0.8); /* Fundo escuro e semi-transparente para a tabela */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar a tabela */
 }
 
@@ -64,7 +60,7 @@ th {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #2C2C2C; /* Cor de fundo alternada para as linhas */
+    background-color: rgba(44, 44, 44, 0.9); /* Cor de fundo alternada para as linhas */
 }
 
 tbody tr:hover {
@@ -100,7 +96,7 @@ td form button:hover {
 
 /* Estilo do Rodapé (caso tenha um) */
 footer {
-    background-color: #1F1F1F; /* Tom escuro para o rodapé */
+    background-color: rgba(31, 31, 31, 0.9); /* Tom escuro e semi-transparente para o rodapé */
     padding: 10px;
     text-align: center;
     position: relative; /* Ajuste conforme necessário */
