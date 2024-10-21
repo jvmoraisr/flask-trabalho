@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.
     css') }}">
-   L<link rel="stylesheet" href="/templates/styles/index.css">
+    <link rel="stylesheet" href="/templates/styles/index.css">
     <title>Sistema de Gerenciamento de Expedição Espacial</title>
 </head>
 <h2>Missões Registradas</h2>
@@ -19,7 +19,6 @@
         </tr>
     </thead>
     <tbody>
-        {% for missao in missoes %}
         <tr>
             <td>{{ missao.id }}</td>
             <td>{{ missao.nome }}</td>
@@ -27,13 +26,11 @@
             <td>{{ missao.destino }}</td>
             <td>{{ missao.estado }}</td>
             <td>
-                <a href="{{ url_for('edit', id=missao.id) }}">Editar</a>
+                <a href="edit.html">Editar</a>
                 <form action="{{ url_for('delete', id=missao.id) }}" method="POST" style="display:inline;">
                     <button type="submit">Deletar</button>
                 </form>
             </td>
         </tr>
-        {% endfor %}
     </tbody>
 </table>
-
