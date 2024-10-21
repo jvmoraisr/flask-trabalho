@@ -7,46 +7,50 @@
     <title>Lista de Missões</title>
 </head>
 <body>
-    <h1>Missões Espaciais</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Data de Lançamento</th>
-                <th>Destino</th>
-                <th>Estado</th>
-                <th>Tripulação</th>
-                <th>Carga Útil</th>
-                <th>Duração</th>
-                <th>Custo</th>
-                <th>Status</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for missao in missoes %}
-            <tr>
-                <td>{{ missao.id }}</td>
-                <td>{{ missao.nome }}</td>
-                <td>{{ missao.data_lancamento }}</td>
-                <td>{{ missao.destino }}</td>
-                <td>{{ missao.estado }}</td>
-                <td>{{ missao.tripulacao }}</td>
-                <td>{{ missao.carga_util }}</td>
-                <td>{{ missao.duracao }}</td>
-                <td>{{ missao.custo }}</td>
-                <td>{{ missao.status }}</td>
-                <td>
-                    <a href="{{ url_for('edit', id=missao.id) }}">Editar</a> |
-                    <form action="{{ url_for('delete', id=missao.id) }}" method="post" style="display:inline;">
-                        <button type="submit">Deletar</button>
-                    </form>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="{{ url_for('create') }}">Criar Nova Missão</a>
+    <header>
+        <h1>Missões Espaciais</h1>
+        <a href="{{ url_for('create') }}" class="btn-criar">Criar Nova Missão</a>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Data de Lançamento</th>
+                    <th>Destino</th>
+                    <th>Estado</th>
+                    <th>Tripulação</th>
+                    <th>Carga Útil</th>
+                    <th>Duração</th>
+                    <th>Custo</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for missao in missoes %}
+                <tr>
+                    <td>{{ missao.id }}</td>
+                    <td>{{ missao.nome }}</td>
+                    <td>{{ missao.data_lancamento }}</td>
+                    <td>{{ missao.destino }}</td>
+                    <td>{{ missao.estado }}</td>
+                    <td>{{ missao.tripulacao }}</td>
+                    <td>{{ missao.carga_util }}</td>
+                    <td>{{ missao.duracao }}</td>
+                    <td>{{ missao.custo }}</td>
+                    <td>{{ missao.status }}</td>
+                    <td>
+                        <a href="{{ url_for('edit', id=missao.id) }}" class="btn-editar">Editar</a> |
+                        <form action="{{ url_for('delete', id=missao.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn-deletar">Deletar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

@@ -5,8 +5,42 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Cor de fundo escura para um tema espacial */
-    color: #FFFFFF; /* Texto branco para contraste */
+    background-image: url('https://i.pinimg.com/originals/fd/b2/1c/fdb21c0e4f3dbb6ccd9a63c68fce8645.gif'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    color: #FFFFFF; 
+}
+
+/* Resto do CSS aqui... */
+
+
+/* Estilo do Cabeçalho */
+header {
+    background-color: #1F1F1F; /* Tom mais escuro para o cabeçalho */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #00BFFF; /* Azul claro para destacar o título */
+}
+
+.btn-criar {
+    background-color: #00BFFF; /* Cor do botão */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s; /* Transição suave para a cor do fundo */
+}
+
+.btn-criar:hover {
+    background-color: #008CBA; /* Tom mais escuro ao passar o mouse */
 }
 
 /* Estilo da Tabela */
@@ -43,10 +77,12 @@ td a {
     color: #00BFFF;
     text-decoration: none;
     margin-right: 10px;
+    transition: color 0.3s; /* Transição suave para a cor do link */
 }
 
 td a:hover {
     text-decoration: underline;
+    color: #008CBA; /* Cor ao passar o mouse */
 }
 
 td form button {
@@ -56,8 +92,25 @@ td form button {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para a cor do botão */
 }
 
 td form button:hover {
     background-color: #FF4500; /* Tom mais escuro de vermelho ao passar o mouse */
+}
+
+/* Estilo do Rodapé (caso tenha um) */
+footer {
+    background-color: #1F1F1F; /* Tom escuro para o rodapé */
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Ajuste conforme necessário */
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #888888; /* Cor de texto mais clara para o rodapé */
+    font-size: 0.9rem;
 }
