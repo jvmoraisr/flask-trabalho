@@ -9,7 +9,7 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-# Rota principal
+# Rota principal - Exibe lista de missões
 @app.route('/')
 def index():
     conn = get_db_connection()
@@ -40,7 +40,7 @@ def create():
 
     return render_template('create.html')
 
-# Rota para editar missão
+# Rota para editar missão existente
 @app.route('/edit/<int:id>', methods=('GET', 'POST'))
 def edit(id):
     conn = get_db_connection()
@@ -48,6 +48,7 @@ def edit(id):
 
     if request.method == 'POST':
         nome = request.form['nome']
+        data_lancamento = request.form['data_lancamento']
         destino = request.form['destino']
         estado = request.form['estado']
         tripulacao = request.form['tripulacao']
@@ -56,8 +57,8 @@ def edit(id):
         custo = request.form['custo']
         status = request.form['status']
 
-        conn.execute('UPDATE missoes SET nome = ?, destino = ?, estado = ?, tripulacao = ?, carga_util = ?, duracao = ?, custo = ?, status = ? WHERE id = ?;',
-                     (nome, destino, estado, tripulacao, carga_util, duracao, custo, status, id))
+        conn.execute('UPDATE missoes SET nome = ?, data_lancamento = ?, destino = ?, estado = ?, tripulacao = ?, carga_util = ?, duracao = ?, custo = ?, status = ? WHERE id = ?;',
+                     (nome, data_lancamento, destino, estado, tripulacao, carga_util, duracao, custo, status, id))
         conn.commit()
         conn.close()
         return redirect(url_for('index'))

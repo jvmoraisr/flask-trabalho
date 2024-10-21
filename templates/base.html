@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.
-    css') }}">
-    <link rel="stylesheet" href="/templates/styles/base.css">
-    <title>Sistema de Gerenciamento de Expedição Espacial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
+    <title>{% block title %}Sistema de Gerenciamento de Expedição Espacial{% endblock %}</title>
 </head>
 <body>
     <header>
         <h1>Sistema de Gerenciamento de Expedição Espacial</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/create">Criar Missão</a>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('create') }}">Criar Missão</a>
         </nav>
     </header>
+    
     <main>
         {% block content %}{% endblock %}
     </main>
+    
     <footer>
         <p>&copy; 2024 Sistema de Expedições Espaciais</p>
     </footer>
