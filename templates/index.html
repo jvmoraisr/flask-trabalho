@@ -43,26 +43,27 @@
                     <td>{{ missao.custo }}</td>
                     <td>{{ missao.status }}</td>
                     <td>
-                        <a href="{{ url_for('edit', id=missao.id) }}" class="btn-editar">Editar</a>
+                        <form action="{{ url_for('edit', id=missao.id) }}" method="get" style="display:inline;">
+                            <button type="submit" class="btn-editar">Editar</button>
+                        </form>
                         <form action="{{ url_for('delete', id=missao.id) }}" method="post" style="display:inline;">
                             <button type="submit" class="btn-deletar">Deletar</button>
                         </form>
-                    </td>
+                    </td>                    
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
 
-        <form action="{{ url_for('search') }}" method="POST" style="margin-top: 20px;">
+        <form action="{{ url_for('search') }}" method="POST" class="search-form" style="margin-top: 20px;">
             <label for="data_inicio">Data de Início:</label>
             <input type="date" id="data_inicio" name="data_inicio" required>
         
             <label for="data_fim">Data de Fim:</label>
             <input type="date" id="data_fim" name="data_fim" required>
         
-            <button type="submit">Buscar</button>
+            <button type="submit" class="btn-search">Buscar</button>
         </form>
     </main>
-    
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* Estilos Globais */
 body, html {
     margin: 0;
     padding: 0;
@@ -9,7 +10,6 @@ body, html {
     background-attachment: fixed;
 }
 
-
 /* Estilo do Cabeçalho */
 header {
     padding: 20px;
@@ -19,68 +19,24 @@ header {
 header h1 {
     margin: 0;
     font-size: 2rem;
-    color: #00BFFF; /* Azul claro para destacar o título */
-    
-}
-/* Estilo do Formulário de Pesquisa */
-form {
-    padding: 10px; /* Aumentar o padding para um visual mais suave */
-    max-width: 50%; /* Largura máxima semelhante à da tabela */
-    margin: 40px auto; /* Centralizar o formulário na página */
-    display: flex; /* Usar flexbox para alinhar os elementos */
-    align-items: center; /* Alinhar itens no centro verticalmente */
-    justify-content: space-between; /* Distribuir espaço entre os itens */
-    background-color: rgba(255, 255, 255, 0.5); /* Aumentar opacidade para harmonizar com a tabela */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais suave e consistente com a tabela */
+    color: #00BFFF;
 }
 
-form input[type="text"],
-form input[type="date"],
-form input[type="number"] {
-    padding: 10px; /* Padding para os campos de entrada */
-    border: 1px solid #2C2C2C; /* Borda sutil */
-    border-radius: 5px; /* Bordas arredondadas nos campos */
-    background-color: rgba(255, 255, 255, 0.5); /* Fundo claro com opacidade */
-    color: #000000; /* Texto escuro */
-}
-
-form input[type="text"]:focus,
-form input[type="date"]:focus,
-form input[type="number"]:focus {
-    outline: none; /* Remove a borda padrão ao focar */
-    border: 1px solid #00BFFF; /* Borda azul claro ao focar no campo */
-}
-
-form button[type="submit"] {
-    background-color: #00BFFF; /* Cor de fundo azul claro para o botão */
-    color: #FFFFFF; /* Texto branco */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-form button[type="submit"]:hover {
-    background-color: #008CBA; /* Tom mais escuro de azul ao passar o mouse */
-}
-
-
+/* Botão Criar Missão */
 .btn-criar {
-    background-color: #00BFFF; /* Cor do botão */
+    background-color: #00BFFF;
     color: #000000;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 10px;
     display: inline-block;
-    transition: background-color 0.3s; /* Transição suave para a cor do fundo */
+    transition: background-color 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-criar:hover {
-    background-color: #008CBA; /* Tom mais escuro ao passar o mouse */
+    background-color: #008CBA;
 }
 
 /* Estilo da Tabela */
@@ -88,85 +44,90 @@ table {
     width: 80%;
     margin: 40px auto;
     border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo escuro e semi-transparente para a tabela */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar a tabela */
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 th, td {
     padding: 15px;
     text-align: left;
-    border: 1px solid #2C2C2C; /* Borda sutil para células da tabela */
+    border: 1px solid #2C2C2C;
 }
 
 th {
-    background-color: #00BFFF; /* Cor de fundo azul claro para o cabeçalho */
-    color: #000000; /* Texto escuro para contraste */
+    background-color: #00BFFF;
+    color: #000000;
     font-size: 1.1rem;
-    
 }
 
 tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo alternada para as linhas */
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 tbody tr:hover {
-    background-color: #d2d4d5; /* Cor azul ao passar o mouse sobre uma linha */
+    background-color: #d2d4d5;
 }
 
-/* Estilo dos Links e Botões de Ação */
-td a {
-    color: #00BFFF;
-    text-decoration: none;
-    margin-right: 10px;
-    transition: color 0.3s; /* Transição suave para a cor do link */
-}
-
-td a:hover {
-    text-decoration: underline;
-    color: #008CBA; /* Cor ao passar o mouse */
-}
-
-.btn-editar {
-    background-color: #32CD32; /* Verde espacial para o botão de editar */
-    color: #FFFFFF; /* Branco para o texto */
-    padding: 5px 10px;
+.btn-editar, .btn-deletar {
+    padding: 10px 15px; /* Padding uniforme para ambos os botões */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor do fundo */
+    font-size: 1rem; /* Tamanho de fonte uniforme */
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove o traço do link */
+    display: inline-block; /* Garante que o botão tenha o comportamento de um bloco inline */
+    min-width: 100px; /* Largura mínima para uniformidade */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do Botão Editar */
+.btn-editar {
+    background-color: #32CD32;
 }
 
 .btn-editar:hover {
-    background-color: #228B22; /* Tom mais escuro de verde ao passar o mouse */
-    color: #FFFFFF; /* Mantém o texto branco ao passar o mouse */
+    background-color: #228B22;
 }
 
-td form button {
-    background-color: #FF6347; /* Cor vermelha para o botão de deletar */
+/* Estilo do Botão Deletar */
+.btn-deletar {
+    background-color: #FF6347;
+}
+
+.btn-deletar:hover {
+    background-color: #FF4500;
+}
+/* Estilo do Formulário de Busca */
+form.search-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form.search-form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #2C2C2C;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000000;
+}
+
+form.search-form button.btn-search {
+    background-color: #00BFFF;
     color: #FFFFFF;
-    border: none;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave para a cor do botão */
+    transition: background-color 0.3s;
 }
 
-td form button:hover {
-    background-color: #FF4500; /* Tom mais escuro de vermelho ao passar o mouse */
-}
-
-/* Estilo do Rodapé (caso tenha um) */
-footer {
-    background-color: rgba(31, 31, 31, 0.9); /* Tom escuro e semi-transparente para o rodapé */
-    padding: 10px;
-    text-align: center;
-    position: relative; /* Ajuste conforme necessário */
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-    color: #888888; /* Cor de texto mais clara para o rodapé */
-    font-size: 0.9rem;
+form.search-form button.btn-search:hover {
+    background-color: #008CBA;
 }
