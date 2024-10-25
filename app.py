@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for 
 import sqlite3
 
 app = Flask(__name__)
@@ -32,13 +32,33 @@ def create():
         status = request.form['status']
 
         conn = get_db_connection()
-        conn.execute('INSERT INTO missoes (nome, data_lancamento, destino, estado, tripulacao, carga_util, duracao, custo, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+        conn.execute('INSERT INTO missoes (nome, data_lancamento, destino, estado, tripulacao, carga_util, duracao, custo, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ',
                      (nome, data_lancamento, destino, estado, tripulacao, carga_util, duracao, custo, status))
         conn.commit()
         conn.close()
         return redirect(url_for('index'))
 
     return render_template('create.html')
+
+# Rota para pesquisar missões por intervalo de datas
+@app.route('/search', methods=('GET', 'POST'))
+def search():
+    missoes = []
+    if request.method == 'POST':
+        data_inicio = request.form['data_inicio']
+        data_fim = request.form['data_fim']
+
+        conn = get_db_connection()
+        missoes = conn.execute('''
+            SELECT * FROM missoes
+            WHERE data_lancamento BETWEEN ? AND ?
+            ORDER BY data_lancamento DESC;
+        ''', (data_inicio, data_fim)).fetchall()
+        conn.close()
+
+        return render_template('search_results.html', missoes=missoes)
+
+    return redirect(url_for('index'))
 
 # Rota para editar missão existente
 @app.route('/edit/<int:id>', methods=('GET', 'POST'))

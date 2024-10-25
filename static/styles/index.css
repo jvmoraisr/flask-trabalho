@@ -12,7 +12,6 @@ body, html {
 
 /* Estilo do Cabeçalho */
 header {
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo escuro e semi-transparente para o cabeçalho */
     padding: 20px;
     text-align: center;
 }
@@ -21,17 +20,63 @@ header h1 {
     margin: 0;
     font-size: 2rem;
     color: #00BFFF; /* Azul claro para destacar o título */
+    
 }
+/* Estilo do Formulário de Pesquisa */
+form {
+    padding: 10px; /* Aumentar o padding para um visual mais suave */
+    max-width: 50%; /* Largura máxima semelhante à da tabela */
+    margin: 40px auto; /* Centralizar o formulário na página */
+    display: flex; /* Usar flexbox para alinhar os elementos */
+    align-items: center; /* Alinhar itens no centro verticalmente */
+    justify-content: space-between; /* Distribuir espaço entre os itens */
+    background-color: rgba(255, 255, 255, 0.5); /* Aumentar opacidade para harmonizar com a tabela */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais suave e consistente com a tabela */
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+    padding: 10px; /* Padding para os campos de entrada */
+    border: 1px solid #2C2C2C; /* Borda sutil */
+    border-radius: 5px; /* Bordas arredondadas nos campos */
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo claro com opacidade */
+    color: #000000; /* Texto escuro */
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus {
+    outline: none; /* Remove a borda padrão ao focar */
+    border: 1px solid #00BFFF; /* Borda azul claro ao focar no campo */
+}
+
+form button[type="submit"] {
+    background-color: #00BFFF; /* Cor de fundo azul claro para o botão */
+    color: #FFFFFF; /* Texto branco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #008CBA; /* Tom mais escuro de azul ao passar o mouse */
+}
+
 
 .btn-criar {
     background-color: #00BFFF; /* Cor do botão */
-    color: #FFFFFF;
+    color: #000000;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 10px;
     display: inline-block;
     transition: background-color 0.3s; /* Transição suave para a cor do fundo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-criar:hover {
@@ -43,7 +88,7 @@ table {
     width: 80%;
     margin: 40px auto;
     border-collapse: collapse;
-    background-color: rgba(31, 31, 31, 0.8); /* Fundo escuro e semi-transparente para a tabela */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo escuro e semi-transparente para a tabela */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar a tabela */
 }
 
@@ -55,16 +100,17 @@ th, td {
 
 th {
     background-color: #00BFFF; /* Cor de fundo azul claro para o cabeçalho */
-    color: #121212; /* Texto escuro para contraste */
+    color: #000000; /* Texto escuro para contraste */
     font-size: 1.1rem;
+    
 }
 
 tbody tr:nth-child(even) {
-    background-color: rgba(44, 44, 44, 0.9); /* Cor de fundo alternada para as linhas */
+    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo alternada para as linhas */
 }
 
 tbody tr:hover {
-    background-color: #008CBA; /* Cor azul ao passar o mouse sobre uma linha */
+    background-color: #d2d4d5; /* Cor azul ao passar o mouse sobre uma linha */
 }
 
 /* Estilo dos Links e Botões de Ação */
@@ -78,6 +124,21 @@ td a {
 td a:hover {
     text-decoration: underline;
     color: #008CBA; /* Cor ao passar o mouse */
+}
+
+.btn-editar {
+    background-color: #32CD32; /* Verde espacial para o botão de editar */
+    color: #FFFFFF; /* Branco para o texto */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor do fundo */
+}
+
+.btn-editar:hover {
+    background-color: #228B22; /* Tom mais escuro de verde ao passar o mouse */
+    color: #FFFFFF; /* Mantém o texto branco ao passar o mouse */
 }
 
 td form button {

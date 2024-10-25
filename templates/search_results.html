@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/search_results.css') }}">
+    <title>Resultados da Pesquisa</title>
+</head>
+<body>
+    <h1>Resultados da Pesquisa</h1>
+
+    {% if missoes %}
+        {% for missao in missoes %}
+            <div>
+                <h3>{{ missao.nome }}</h3>
+                <p>Data de Lançamento: {{ missao.data_lancamento }}</p>
+                <p>Destino: {{ missao.destino }}</p>
+                <p>Estado: {{ missao.estado }}</p>
+                
+                <a href="{{ url_for('edit', id=missao.id) }}">Editar</a>
+                
+                <form action="{{ url_for('delete', id=missao.id) }}" method="POST" style="display:inline;" onsubmit="return confirmDelete();">
+                    <button type="submit">Excluir</button>
+                </form>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Nenhuma missão encontrada no intervalo de datas especificado.</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Voltar para a lista de missões</a>
+
+    <script>
+    function confirmDelete() {
+        return confirm("Você tem certeza que deseja excluir esta missão?");
+    }
+    </script>
+</body>
+</html>
