@@ -8,11 +8,12 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-size: 1rem; 
 }
 
 /* Estilo do Cabeçalho */
 header {
-    padding: 20px;
+    padding: 1.25rem; 
     text-align: center;
 }
 
@@ -26,13 +27,13 @@ header h1 {
 .btn-criar {
     background-color: #00BFFF;
     color: #000000;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.625rem 1.25rem; 
+    border-radius: 0.3125rem; 
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 0.625rem; 
     display: inline-block;
     transition: background-color 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5); 
 }
 
 .btn-criar:hover {
@@ -42,16 +43,16 @@ header h1 {
 /* Estilo da Tabela */
 table {
     width: 80%;
-    margin: 40px auto;
+    margin: 2.5rem auto; 
     border-collapse: collapse;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5); 
 }
 
 th, td {
-    padding: 15px;
+    padding: 0.9375rem; 
     text-align: left;
-    border: 1px solid #2C2C2C;
+    border: 0.0625rem solid #2C2C2C; 
 }
 
 th {
@@ -68,18 +69,19 @@ tbody tr:hover {
     background-color: #d2d4d5;
 }
 
+/* Botões Editar e Deletar */
 .btn-editar, .btn-deletar {
-    padding: 10px 15px; /* Padding uniforme para ambos os botões */
+    padding: 0.625rem 0.9375rem; 
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem; 
     cursor: pointer;
-    font-size: 1rem; /* Tamanho de fonte uniforme */
+    font-size: 1rem;
     color: #FFFFFF;
     transition: background-color 0.3s ease;
-    text-decoration: none; /* Remove o traço do link */
-    display: inline-block; /* Garante que o botão tenha o comportamento de um bloco inline */
-    min-width: 100px; /* Largura mínima para uniformidade */
-    text-align: center; /* Centraliza o texto */
+    text-decoration: none;
+    display: inline-block;
+    min-width: 6.25rem; 
+    text-align: center;
 }
 
 /* Estilo do Botão Editar */
@@ -99,22 +101,23 @@ tbody tr:hover {
 .btn-deletar:hover {
     background-color: #FF4500;
 }
+
 /* Estilo do Formulário de Busca */
 form.search-form {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    max-width: 500px;
-    margin: 20px auto;
+    padding: 0.625rem; 
+    max-width: 31.25rem; 
+    margin: 1.25rem auto; 
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.625rem; 
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); 
 }
 
 form.search-form input[type="date"] {
-    padding: 10px;
-    border: 1px solid #2C2C2C;
-    border-radius: 5px;
+    padding: 0.625rem; 
+    border: 0.0625rem solid #2C2C2C; 
+    border-radius: 0.3125rem; 
     background-color: rgba(255, 255, 255, 0.5);
     color: #000000;
 }
@@ -122,8 +125,8 @@ form.search-form input[type="date"] {
 form.search-form button.btn-search {
     background-color: #00BFFF;
     color: #FFFFFF;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.625rem 1.25rem; 
+    border-radius: 0.3125rem; 
     cursor: pointer;
     transition: background-color 0.3s;
 }
