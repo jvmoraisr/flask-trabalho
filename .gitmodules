@@ -1,0 +1,3 @@
+[submodule "flask-trabalho"]
+	path = flask-trabalho
+	url = https://github.com/jvmoraisr/flask-trabalho.git
